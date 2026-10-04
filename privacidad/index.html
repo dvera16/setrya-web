@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de privacidad — SETRYA</title>
+  <meta name="description" content="Qué datos maneja SETRYA, dónde se guardan y qué control tienes sobre ellos.">
+  <meta name="theme-color" content="#0a100c">
+  <link rel="icon" href="../assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../">
+      <img src="../assets/icon.png" alt="" width="32" height="32">
+      SETRYA
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a class="hide-sm" href="../#funciones">Funciones</a>
+      <a class="current" href="./" aria-current="page">Privacidad</a>
+      <a href="../#descargar">Descargar</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc">
+  <div class="wrap">
+    <div class="doc-head">
+      <span class="overline">Legal</span>
+      <h1>Política de privacidad</h1>
+      <p class="doc-meta">Última actualización: 4 de octubre de 2026</p>
+    </div>
+
+    <article>
+      <p>Esta política explica qué datos maneja SETRYA (la «App»), cómo se almacenan y qué opciones tienes sobre ellos. SETRYA está desarrollada por un desarrollador independiente («nosotros», «el desarrollador»).</p>
+
+      <h2>1. Resumen</h2>
+      <p>SETRYA es una app de entrenamiento <strong>local-first</strong>: no tiene cuenta de usuario ni servidor propio, y toda tu información de entrenamiento se guarda <strong>en tu dispositivo</strong>, en una base de datos local (SQLite). No usamos analítica, publicidad ni rastreadores de terceros: no hay ningún SDK de este tipo integrado en la App.</p>
+      <p>Los únicos datos que salen de tu dispositivo lo hacen porque tú activas explícitamente una función opcional (Health Connect, copia de seguridad en Google Drive o compartir en redes sociales), descritas en la sección 3.</p>
+
+      <h2>2. Datos que se guardan en tu dispositivo</h2>
+      <p>Al usar SETRYA introduces y la App almacena localmente:</p>
+      <ul>
+        <li><strong>Perfil</strong>: nombre, fecha de nacimiento, sexo, altura, peso, medidas corporales opcionales (cuello, cintura, cadera), porcentaje de grasa corporal, nivel de actividad, objetivo de entrenamiento, nivel de experiencia y días de entrenamiento por semana.</li>
+        <li><strong>Rutinas</strong>: los ejercicios, series, repeticiones y descansos que configuras en tus rutinas guardadas.</li>
+        <li><strong>Historial de entrenamientos</strong>: sesiones realizadas, series completadas, pesos y repeticiones registrados, y marcas personales (PRs) calculadas a partir de ellos.</li>
+        <li><strong>Fotos de entrenamiento</strong> (opcional): si eliges añadir una foto a una sesión desde la cámara o la galería de tu dispositivo, esa imagen se guarda en el almacenamiento local de la App.</li>
+      </ul>
+      <p>Ninguno de estos datos se envía a ningún servidor nuestro, porque SETRYA no tiene servidor. Si desinstalas la App, esta información se borra junto con el resto de datos de la aplicación (salvo la copia que hayas guardado tú mismo con la función de copia de seguridad, ver 3.2).</p>
+
+      <h2>3. Funciones opcionales que comparten datos con terceros</h2>
+      <p>Estas funciones están <strong>desactivadas por defecto</strong> y solo actúan si tú las activas explícitamente desde la pantalla de Perfil.</p>
+
+      <h3>3.1 Health Connect (solo Android)</h3>
+      <p>Si conectas Health Connect desde Perfil, SETRYA lee y escribe en la plataforma Health Connect de tu dispositivo (gestionada por Google, no por nosotros) los siguientes tipos de datos, cada uno con permiso independiente que puedes conceder o revocar:</p>
+      <table>
+        <thead><tr><th>Dato</th><th>Lectura</th><th>Escritura</th></tr></thead>
+        <tbody>
+          <tr><td>Peso</td><td>Sí</td><td>Sí</td></tr>
+          <tr><td>Porcentaje de grasa corporal</td><td>Sí</td><td>Sí</td></tr>
+          <tr><td>Altura</td><td>Sí</td><td>Sí</td></tr>
+          <tr><td>Pasos</td><td>Sí</td><td>No</td></tr>
+          <tr><td>Calorías activas</td><td>Sí</td><td>Sí</td></tr>
+          <tr><td>Sesiones de ejercicio</td><td>Sí</td><td>Sí</td></tr>
+        </tbody>
+      </table>
+      <p>Peso, grasa corporal y altura se sincronizan en ambas direcciones con tu perfil de SETRYA. Al terminar un entrenamiento, SETRYA lo registra como sesión de ejercicio en Health Connect (con las calorías que calcula la propia App), para que aparezca también en apps como Google Fit. Esta sincronización solo ocurre en Android y solo mientras mantengas los permisos concedidos; puedes revocarlos en cualquier momento desde los ajustes de Health Connect de tu dispositivo. Estos datos permanecen en Health Connect y no pasan por ningún servidor nuestro.</p>
+
+      <h3>3.2 Copia de seguridad en Google Drive (opcional)</h3>
+      <p>Si eliges hacer una copia de seguridad, SETRYA te pide iniciar sesión con tu cuenta de Google (mediante Google Sign-In) y solicita permiso de acceso a una carpeta oculta de tu Google Drive reservada para la App (<code>drive.appdata</code>), a la que solo SETRYA puede acceder: no es visible en tu Drive normal ni accesible por otras apps.</p>
+      <ul>
+        <li>Se sube un único archivo (<code>setrya-backup.json</code>) con el contenido de tu perfil, rutinas e historial de entrenamientos, sobrescribiendo la copia anterior en cada backup.</li>
+        <li>Ese archivo queda almacenado en tu propia cuenta de Google Drive, sujeto a la <a href="https://policies.google.com/privacy">Política de Privacidad de Google</a>; nosotros no tenemos acceso a él ni a tus credenciales de Google.</li>
+        <li>Puedes cerrar sesión desde la App en cualquier momento, y revocar el acceso de SETRYA a tu cuenta de Google desde los <a href="https://myaccount.google.com/permissions">ajustes de tu cuenta de Google</a>.</li>
+        <li>Solo usamos esta conexión para subir y descargar ese archivo de copia de seguridad; no accedemos a ningún otro dato de tu cuenta de Google.</li>
+      </ul>
+
+      <div class="callout">
+        <p><strong>Uso de datos recibidos de las APIs de Google.</strong> El uso que SETRYA hace de la información recibida de las APIs de Google cumple la <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de datos de usuario de los servicios de API de Google</a>, incluidos los requisitos de uso limitado.</p>
+      </div>
+
+      <h3>3.3 Compartir en Instagram/Facebook Stories (opcional, solo Android)</h3>
+      <p>Si usas la opción de compartir un resumen de tu entrenamiento en Instagram o Facebook Stories, SETRYA genera una imagen localmente y la pasa directamente a la app de Instagram o Facebook instalada en tu dispositivo mediante un intent nativo de Android. No pasa por ningún servidor nuestro. El uso que Instagram/Facebook (Meta) hagan de esa imagen una vez la compartes se rige por sus propias políticas de privacidad.</p>
+
+      <h2>4. Permisos del dispositivo</h2>
+      <p>SETRYA puede solicitar los siguientes permisos, siempre ligados a una función que activas tú:</p>
+      <ul>
+        <li><strong>Cámara y galería</strong>: para añadir una foto opcional a un entrenamiento.</li>
+        <li><strong>Notificaciones</strong>: para avisarte cuando termina tu temporizador de descanso entre series.</li>
+        <li><strong>Alarmas exactas</strong> (<code>SCHEDULE_EXACT_ALARM</code>): para que el aviso de fin de descanso llegue puntual aunque el dispositivo esté en reposo.</li>
+        <li><strong>Ignorar optimización de batería</strong>: opcional, para evitar que el sistema retrase las notificaciones del temporizador de descanso.</li>
+      </ul>
+      <p>Ninguno de estos permisos se usa para recopilar datos con fines distintos a los descritos: no hay seguimiento de ubicación, contactos ni identificadores publicitarios.</p>
+
+      <h2>5. Lo que SETRYA no hace</h2>
+      <ul>
+        <li>No usamos analítica de terceros, SDKs publicitarios ni rastreadores de comportamiento.</li>
+        <li>No vendemos ni compartimos tus datos con terceros con fines comerciales o publicitarios.</li>
+        <li>No tenemos cuenta de usuario propia ni servidor donde se almacenen tus datos.</li>
+        <li>No accedemos a tus datos salvo que tú nos los envíes directamente (por ejemplo, si nos escribes para pedir soporte).</li>
+      </ul>
+
+      <h2>6. Seguridad y control de tus datos</h2>
+      <p>Tus datos viven en la base de datos local de la App, protegida por el sandbox de aplicaciones de Android. Puedes:</p>
+      <ul>
+        <li>Editar o eliminar cualquier dato de perfil, rutina o entrenamiento desde la propia App.</li>
+        <li>Revocar el acceso a Health Connect o a Google Drive en cualquier momento, como se explica en la sección 3.</li>
+        <li>Borrar todos tus datos desinstalando la App. Esto no elimina una copia de seguridad ya subida a tu Google Drive; para eso, bórrala desde tu Drive.</li>
+      </ul>
+
+      <h2>7. Menores de edad</h2>
+      <p>SETRYA no está dirigida a menores de 13 años (o a la edad mínima equivalente que marque la legislación de tu país) y no recopilamos conscientemente datos de menores de esa edad.</p>
+
+      <h2>8. Cambios en esta política</h2>
+      <p>Si actualizamos esta política, publicaremos la nueva versión en esta misma página con la fecha de «Última actualización» revisada. Si el cambio es significativo, procuraremos avisarte dentro de la propia App.</p>
+
+      <h2>9. Contacto</h2>
+      <p>Si tienes cualquier duda sobre esta política o sobre tus datos, puedes escribirnos a <a href="mailto:contacto.setrya@gmail.com">contacto.setrya@gmail.com</a>.</p>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <div>
+      <div>© 2026 SETRYA · Desarrollada de forma independiente</div>
+      <div><a href="mailto:contacto.setrya@gmail.com">contacto.setrya@gmail.com</a></div>
+    </div>
+    <nav class="footer-links" aria-label="Pie">
+      <a href="../">Inicio</a>
+      <a href="./">Política de privacidad</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
