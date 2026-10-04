@@ -13,7 +13,7 @@
   <link rel="icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -36,20 +36,24 @@
 
   <section class="hero halo">
     <div class="wrap hero-grid">
-      <div>
-        <span class="overline">Entrenamiento de fuerza</span>
-        <h1>Rutinas guiadas por tu perfil y tu objetivo.</h1>
+      <div class="hero-copy">
+        <span class="pill">Entrenamiento de fuerza</span>
+        <h1>Rutinas guiadas por tu perfil y tu <span class="accent">objetivo</span>.</h1>
         <p class="lede">SETRYA te propone series, repeticiones y descansos según si quieres ganar músculo, perder grasa, ganar fuerza o mantenerte, y según tu nivel. Tú eliges los ejercicios; la app te dice cuánto volumen tiene sentido por grupo muscular.</p>
         <div class="cta-row">
           <span class="btn btn-primary btn-disabled" aria-disabled="true">Próximamente en Play Store</span>
           <a class="btn btn-ghost" href="privacidad/">Política de privacidad</a>
         </div>
-        <p class="fine">Sin cuenta. Todo en tu móvil.</p>
+        <ul class="trust">
+          <li><span class="ic" style="--icon:url(assets/icons/user-x.svg)"></span>Sin cuenta</li>
+          <li><span class="ic" style="--icon:url(assets/icons/smartphone.svg)"></span>Todo en tu móvil</li>
+          <li><span class="ic" style="--icon:url(assets/icons/ban.svg)"></span>Sin publicidad</li>
+        </ul>
       </div>
 
       <div class="hero-visual">
         <figure class="phone">
-          <img src="assets/capturas/asistente.webp" alt="Asistente de rutina de SETRYA, paso 1: elegir el nivel de experiencia" width="540" height="1200" loading="eager">
+          <img src="assets/capturas/asistente.webp" alt="Asistente de rutina de SETRYA, paso 1: elegir el nivel de experiencia" width="540" height="1200">
         </figure>
       </div>
     </div>
@@ -57,20 +61,23 @@
 
   <section class="block" id="como-funciona">
     <div class="wrap">
-      <h2>Cómo te guía la app</h2>
-      <p class="section-lede">Tres pasos. Los números salen de tu perfil, no de una plantilla genérica.</p>
+      <div class="head">
+        <span class="overline">Cómo funciona</span>
+        <h2>Cómo te guía la app</h2>
+        <p class="section-lede">Tres pasos. Los números salen de tu perfil, no de una plantilla genérica.</p>
+      </div>
       <ol class="steps">
-        <li>
+        <li class="card">
           <span class="step-n">1</span>
           <h3>Tu perfil y tu objetivo</h3>
           <p>Indicas sexo, altura, peso y si quieres ganar músculo, perder grasa, ganar fuerza o mantenerte. Con eso se calcula el volumen semanal que te corresponde.</p>
         </li>
-        <li>
+        <li class="card">
           <span class="step-n">2</span>
           <h3>El asistente de rutina</h3>
-          <p>Eliges tu nivel (principiante, intermedio o avanzado) y los días por semana, de 2 a 6. Para cada día añades ejercicios y la app te sugiere series, repeticiones y descanso, con el volumen de cada grupo muscular actualizado en vivo.</p>
+          <p>Eliges tu nivel y los días por semana, de 2 a 6. Para cada día añades ejercicios y la app te sugiere series, repeticiones y descanso, con el volumen de cada grupo muscular actualizado en vivo.</p>
         </li>
-        <li>
+        <li class="card">
           <span class="step-n">3</span>
           <h3>Entrenar y revisar</h3>
           <p>La app te dice qué día toca, registras peso y repeticiones de cada serie y descansas con el cronómetro. Después ves tu progreso en el historial.</p>
@@ -79,51 +86,63 @@
     </div>
   </section>
 
-  <section class="block" id="capturas">
+  <section class="block band" id="capturas">
     <div class="wrap">
-      <h2>Así se ve en el móvil</h2>
-      <p class="section-lede">Capturas reales de la app en un emulador de Android, con datos de ejemplo.</p>
+      <div class="head">
+        <span class="overline">La app</span>
+        <h2>Así se ve en el móvil</h2>
+        <p class="section-lede">Capturas reales de la app en un emulador de Android, con datos de ejemplo.</p>
+      </div>
 
       <div class="gallery">
         <figure class="shot">
-          <img src="assets/capturas/inicio.webp" alt="Pantalla de Inicio con el progreso semanal y la siguiente sesión" loading="lazy" width="540" height="1200">
-          <figcaption>Inicio: progreso de la semana y la siguiente sesión.</figcaption>
+          <div class="shot-frame"><img src="assets/capturas/inicio.webp" alt="Pantalla de Inicio con el progreso semanal y la siguiente sesión" loading="lazy" width="540" height="1200"></div>
+          <figcaption><strong>Inicio</strong> · progreso de la semana y la siguiente sesión.</figcaption>
         </figure>
         <figure class="shot">
-          <img src="assets/capturas/rutina-expandida.webp" alt="Rutina con sus días, volumen semanal y ejercicios con series, repeticiones y descanso" loading="lazy" width="540" height="1200">
-          <figcaption>Rutina: días, ejercicios y los números que propone la app.</figcaption>
+          <div class="shot-frame"><img src="assets/capturas/rutina-expandida.webp" alt="Rutina con sus días, volumen semanal y ejercicios" loading="lazy" width="540" height="1200"></div>
+          <figcaption><strong>Rutina</strong> · días, ejercicios y los números que propone la app.</figcaption>
         </figure>
         <figure class="shot">
-          <img src="assets/capturas/entrenar.webp" alt="Pantalla de Entrenar para registrar las series de cada ejercicio" loading="lazy" width="540" height="1200">
-          <figcaption>Entrenar: registras peso y repeticiones de cada serie.</figcaption>
+          <div class="shot-frame"><img src="assets/capturas/entrenar.webp" alt="Pantalla de Entrenar para registrar las series" loading="lazy" width="540" height="1200"></div>
+          <figcaption><strong>Entrenar</strong> · registras peso y repeticiones de cada serie.</figcaption>
         </figure>
         <figure class="shot">
-          <img src="assets/capturas/grafica-historial.webp" alt="Gráfica de peso máximo por sesión de un ejercicio, con repeticiones" loading="lazy" width="540" height="1200">
-          <figcaption>Historial: progreso de cada ejercicio, sesión a sesión.</figcaption>
+          <div class="shot-frame"><img src="assets/capturas/grafica-historial.webp" alt="Gráfica de peso máximo por sesión de un ejercicio" loading="lazy" width="540" height="1200"></div>
+          <figcaption><strong>Historial</strong> · progreso de cada ejercicio, sesión a sesión.</figcaption>
         </figure>
       </div>
 
       <div class="videos">
-        <figure class="clip">
+        <div class="card clip">
           <video src="assets/capturas/inicio-animacion.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Animación del anillo de progreso en la pantalla de Inicio"></video>
-          <figcaption>El anillo de progreso se anima al abrir la app.</figcaption>
-        </figure>
-        <figure class="clip">
+          <div>
+            <span class="overline">Inicio</span>
+            <p>El anillo de progreso se anima al abrir la app.</p>
+          </div>
+        </div>
+        <div class="card clip">
           <video src="assets/capturas/grafica-animacion.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Animación de la gráfica de progreso al cambiar el rango de sesiones"></video>
-          <figcaption>Las gráficas se animan al cambiar el rango de sesiones.</figcaption>
-        </figure>
+          <div>
+            <span class="overline">Historial</span>
+            <p>Las gráficas se animan al cambiar el rango de sesiones.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="block" id="funciones">
     <div class="wrap">
-      <h2>Todas las funciones</h2>
-      <p class="section-lede">Todo lo que trae la versión actual de la app, agrupado por pantalla.</p>
+      <div class="head">
+        <span class="overline">Funciones</span>
+        <h2>Todas las funciones</h2>
+        <p class="section-lede">Todo lo que trae la versión actual de la app, agrupado por pantalla.</p>
+      </div>
 
       <div class="feature-groups">
-        <article class="group">
-          <h3>Rutinas</h3>
+        <article class="card group">
+          <div class="group-head"><span class="ic-box"><span class="ic" style="--icon:url(assets/icons/clipboard-list.svg)"></span></span><h3>Rutinas</h3></div>
           <ul>
             <li>Asistente de rutina en 3 pasos: nivel de experiencia, días por semana (de 2 a 6) y ejercicios de cada día.</li>
             <li>Series, repeticiones y descanso sugeridos según tu objetivo y tu nivel, con la explicación de cada número.</li>
@@ -135,8 +154,8 @@
           </ul>
         </article>
 
-        <article class="group">
-          <h3>Entrenar</h3>
+        <article class="card group">
+          <div class="group-head"><span class="ic-box"><span class="ic" style="--icon:url(assets/icons/dumbbell.svg)"></span></span><h3>Entrenar</h3></div>
           <ul>
             <li>Elige el día de tu rutina que toca, o entrena sin rutina con ejercicios elegidos al momento.</li>
             <li>Registro de cada serie: repeticiones, peso y marca de serie completada.</li>
@@ -148,8 +167,8 @@
           </ul>
         </article>
 
-        <article class="group">
-          <h3>Historial</h3>
+        <article class="card group">
+          <div class="group-head"><span class="ic-box"><span class="ic" style="--icon:url(assets/icons/history.svg)"></span></span><h3>Historial</h3></div>
           <ul>
             <li>Gráfica de peso máximo por sesión, con las últimas 10 o todas las sesiones.</li>
             <li>Máximo, mínimo y media de cada ejercicio.</li>
@@ -161,8 +180,8 @@
           </ul>
         </article>
 
-        <article class="group">
-          <h3>Inicio</h3>
+        <article class="card group">
+          <div class="group-head"><span class="ic-box"><span class="ic" style="--icon:url(assets/icons/house.svg)"></span></span><h3>Inicio</h3></div>
           <ul>
             <li>Anillo de progreso con las series efectivas de la semana frente al objetivo.</li>
             <li>Último peso y % de grasa guardados.</li>
@@ -172,8 +191,8 @@
           </ul>
         </article>
 
-        <article class="group">
-          <h3>Perfil</h3>
+        <article class="card group">
+          <div class="group-head"><span class="ic-box"><span class="ic" style="--icon:url(assets/icons/user.svg)"></span></span><h3>Perfil</h3></div>
           <ul>
             <li>Datos básicos: nombre, fecha de nacimiento, sexo, altura y peso.</li>
             <li>Objetivo: ganar músculo, perder grasa, ganar fuerza o mantenimiento.</li>
@@ -182,8 +201,8 @@
           </ul>
         </article>
 
-        <article class="group">
-          <h3>Ajustes y datos</h3>
+        <article class="card group">
+          <div class="group-head"><span class="ic-box"><span class="ic" style="--icon:url(assets/icons/settings.svg)"></span></span><h3>Ajustes y datos</h3></div>
           <ul>
             <li>Ocho temas de color, que se aplican al instante a toda la app.</li>
             <li>Guardar y restaurar una copia de seguridad en un archivo que tú eliges.</li>
@@ -200,26 +219,45 @@
   <section class="block" id="privacidad">
     <div class="wrap">
       <div class="privacy-box">
-        <h2>Tus datos se quedan contigo</h2>
-        <p class="section-lede">SETRYA no tiene cuenta de usuario ni servidor propio. Estas son las reglas de la app, sin letra pequeña:</p>
-        <ul class="privacy-list">
-          <li><div><strong>Todo en tu dispositivo.</strong> Perfil, rutinas e historial se guardan en una base de datos local.</div></li>
-          <li><div><strong>Sin analítica ni publicidad.</strong> No hay SDKs de seguimiento ni de anuncios dentro de la app.</div></li>
-          <li><div><strong>Lo opcional, solo si lo activas.</strong> Health Connect y la copia en Google Drive están desactivados por defecto, y puedes revocarlos cuando quieras.</div></li>
-          <li><div><strong>Copia en Drive, en tu cuenta.</strong> Si la usas, se guarda en una carpeta oculta que solo la app puede ver. Nosotros no accedemos a ella.</div></li>
-        </ul>
-        <a class="btn btn-ghost" href="privacidad/">Leer la política de privacidad completa</a>
+        <div class="privacy-intro">
+          <span class="overline">Privacidad</span>
+          <h2>Tus datos se quedan contigo</h2>
+          <p class="section-lede">SETRYA no tiene cuenta de usuario ni servidor propio. Estas son las reglas de la app, sin letra pequeña.</p>
+          <a class="more" href="privacidad/">Leer la política de privacidad completa <span class="ic" style="--icon:url(assets/icons/arrow-right.svg)"></span></a>
+        </div>
+        <div class="privacy-grid">
+          <div>
+            <span class="ic-box"><span class="ic" style="--icon:url(assets/icons/smartphone.svg)"></span></span>
+            <h3>Todo en tu dispositivo</h3>
+            <p>Perfil, rutinas e historial se guardan en una base de datos local.</p>
+          </div>
+          <div>
+            <span class="ic-box"><span class="ic" style="--icon:url(assets/icons/eye-off.svg)"></span></span>
+            <h3>Sin analítica ni publicidad</h3>
+            <p>No hay SDKs de seguimiento ni de anuncios dentro de la app.</p>
+          </div>
+          <div>
+            <span class="ic-box"><span class="ic" style="--icon:url(assets/icons/toggle-left.svg)"></span></span>
+            <h3>Lo opcional, solo si lo activas</h3>
+            <p>Health Connect y la copia en Google Drive están desactivados por defecto, y puedes revocarlos cuando quieras.</p>
+          </div>
+          <div>
+            <span class="ic-box"><span class="ic" style="--icon:url(assets/icons/folder-lock.svg)"></span></span>
+            <h3>Copia en Drive, en tu cuenta</h3>
+            <p>Si la usas, se guarda en una carpeta oculta que solo la app puede ver. Nosotros no accedemos a ella.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="block" id="proximamente">
-    <div class="wrap">
-      <div class="announce">
-        <span class="badge">Próximamente en Play Store</span>
-        <h2>Estamos terminando SETRYA</h2>
-        <p class="section-lede">Llegará a Google Play. Esta página se actualizará cuando esté disponible.</p>
-      </div>
+  <section class="launch" id="proximamente">
+    <div class="launch-inner">
+      <img src="assets/icon.png" alt="" width="64" height="64">
+      <span class="pill">Próximamente en Play Store</span>
+      <h2>Estamos terminando SETRYA</h2>
+      <p class="section-lede">Llegará a Google Play. Esta página se actualizará cuando esté disponible.</p>
+      <a class="btn btn-ghost" href="mailto:contacto.setrya@gmail.com">contacto.setrya@gmail.com</a>
     </div>
   </section>
 
@@ -227,13 +265,11 @@
 
 <footer class="site-footer">
   <div class="wrap footer-row">
-    <div>
-      <div>© 2026 SETRYA · Desarrollada de forma independiente</div>
-      <div><a href="mailto:contacto.setrya@gmail.com">contacto.setrya@gmail.com</a></div>
-    </div>
+    <span>© 2026 SETRYA · Desarrollada de forma independiente</span>
     <nav class="footer-links" aria-label="Pie">
       <a href="privacidad/">Política de privacidad</a>
       <a href="#funciones">Funciones</a>
+      <a href="mailto:contacto.setrya@gmail.com">Contacto</a>
     </nav>
   </div>
 </footer>
