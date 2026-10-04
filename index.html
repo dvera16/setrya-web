@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SETRYA — Entrenamiento de fuerza sin cuenta ni nube</title>
-  <meta name="description" content="SETRYA es una app de entrenamiento de fuerza que guarda todo en tu móvil. Sin cuenta, sin servidor y sin publicidad.">
+  <title>SETRYA — Rutinas guiadas por tu perfil y tu objetivo</title>
+  <meta name="description" content="SETRYA te propone series, repeticiones y descansos según tu objetivo y tu nivel. Todo se guarda en tu móvil: sin cuenta, sin servidor y sin publicidad.">
   <meta name="theme-color" content="#0a100c">
-  <meta property="og:title" content="SETRYA — Entrenamiento de fuerza sin cuenta ni nube">
-  <meta property="og:description" content="Rutinas, series, descanso e historial. Todo en tu dispositivo.">
+  <meta property="og:title" content="SETRYA — Rutinas guiadas por tu perfil y tu objetivo">
+  <meta property="og:description" content="Asistente de rutina, registro de series, descanso con aviso e historial con gráficas. Todo en tu dispositivo.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/icon.png">
+  <meta property="og:image" content="assets/capturas/asistente.webp">
   <link rel="icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,8 @@
       SETRYA
     </a>
     <nav class="nav" aria-label="Principal">
-      <a href="#funciones">Funciones</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a class="hide-sm" href="#funciones">Funciones</a>
       <a href="#privacidad">Privacidad</a>
     </nav>
   </div>
@@ -37,59 +38,160 @@
     <div class="wrap hero-grid">
       <div>
         <span class="overline">Entrenamiento de fuerza</span>
-        <h1>Tu entreno, en tu móvil. Sin cuenta ni nube obligatoria.</h1>
-        <p class="lede">SETRYA te ayuda a montar tus rutinas, registrar cada serie y ver cómo progresas. Todo se guarda en tu dispositivo: no hay registro, ni servidor, ni publicidad.</p>
+        <h1>Rutinas guiadas por tu perfil y tu objetivo.</h1>
+        <p class="lede">SETRYA te propone series, repeticiones y descansos según si quieres ganar músculo, perder grasa, ganar fuerza o mantenerte, y según tu nivel. Tú eliges los ejercicios; la app te dice cuánto volumen tiene sentido por grupo muscular.</p>
         <div class="cta-row">
           <span class="btn btn-primary btn-disabled" aria-disabled="true">Próximamente en Play Store</span>
           <a class="btn btn-ghost" href="privacidad/">Política de privacidad</a>
         </div>
-        <p class="fine">Gratis. Sin cuenta.</p>
+        <p class="fine">Gratis. Sin cuenta. Todo en tu móvil.</p>
       </div>
 
-      <div class="hero-visual" aria-hidden="true">
-        <div class="app-card">
-          <div class="app-card-head">
-            <img src="assets/icon.png" alt="" width="44" height="44">
-            <div>
-              <div class="app-card-title">Empuje · Día A</div>
-              <div class="app-card-sub">Serie 2 de 4 · descanso 90 s</div>
-            </div>
-          </div>
-          <ul class="ex-list">
-            <li><span>Press banca</span><span class="done">✓ 80 kg × 8</span></li>
-            <li><span>Press inclinado con mancuernas</span><span>3 × 10</span></li>
-            <li><span>Aperturas en polea</span><span>3 × 12</span></li>
-          </ul>
-          <div class="set-row"><span>Volumen semanal · pecho</span><strong>Zona óptima</strong></div>
-        </div>
+      <div class="hero-visual">
+        <figure class="phone">
+          <img src="assets/capturas/asistente.webp" alt="Asistente de rutina de SETRYA, paso 1: elegir el nivel de experiencia" width="540" height="1200" loading="eager">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="como-funciona">
+    <div class="wrap">
+      <h2>Cómo te guía la app</h2>
+      <p class="section-lede">Tres pasos. Los números salen de tu perfil, no de una plantilla genérica.</p>
+      <ol class="steps">
+        <li>
+          <span class="step-n">1</span>
+          <h3>Tu perfil y tu objetivo</h3>
+          <p>Indicas sexo, altura, peso y si quieres ganar músculo, perder grasa, ganar fuerza o mantenerte. Con eso se calcula el volumen semanal que te corresponde.</p>
+        </li>
+        <li>
+          <span class="step-n">2</span>
+          <h3>El asistente de rutina</h3>
+          <p>Eliges tu nivel (principiante, intermedio o avanzado) y los días por semana, de 2 a 6. Para cada día añades ejercicios y la app te sugiere series, repeticiones y descanso, con el volumen de cada grupo muscular actualizado en vivo.</p>
+        </li>
+        <li>
+          <span class="step-n">3</span>
+          <h3>Entrenar y revisar</h3>
+          <p>La app te dice qué día toca, registras peso y repeticiones de cada serie y descansas con el cronómetro. Después ves tu progreso en el historial.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block" id="capturas">
+    <div class="wrap">
+      <h2>Así se ve en el móvil</h2>
+      <p class="section-lede">Capturas reales de la app en un emulador de Android, con datos de ejemplo.</p>
+
+      <div class="gallery">
+        <figure class="shot">
+          <img src="assets/capturas/inicio.webp" alt="Pantalla de Inicio con el progreso semanal y la siguiente sesión" loading="lazy" width="540" height="1200">
+          <figcaption>Inicio: progreso de la semana y la siguiente sesión.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/capturas/rutina-expandida.webp" alt="Rutina con sus días, volumen semanal y ejercicios con series, repeticiones y descanso" loading="lazy" width="540" height="1200">
+          <figcaption>Rutina: días, ejercicios y los números que propone la app.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/capturas/entrenar.webp" alt="Pantalla de Entrenar para registrar las series de cada ejercicio" loading="lazy" width="540" height="1200">
+          <figcaption>Entrenar: registras peso y repeticiones de cada serie.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/capturas/grafica-historial.webp" alt="Gráfica de peso máximo por sesión de un ejercicio, con repeticiones" loading="lazy" width="540" height="1200">
+          <figcaption>Historial: progreso de cada ejercicio, sesión a sesión.</figcaption>
+        </figure>
+      </div>
+
+      <div class="videos">
+        <figure class="clip">
+          <video src="assets/capturas/inicio-animacion.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Animación del anillo de progreso en la pantalla de Inicio"></video>
+          <figcaption>El anillo de progreso se anima al abrir la app.</figcaption>
+        </figure>
+        <figure class="clip">
+          <video src="assets/capturas/grafica-animacion.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Animación de la gráfica de progreso al cambiar el rango de sesiones"></video>
+          <figcaption>Las gráficas se animan al cambiar el rango de sesiones.</figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
   <section class="block" id="funciones">
     <div class="wrap">
-      <h2>Lo que necesitas, sin ruido</h2>
-      <p class="section-lede">Una herramienta para entrenar: planificar, registrar y revisar. Nada de feeds ni de tareas que no pediste.</p>
-      <div class="features">
-        <article class="feature">
-          <div class="feature-icon" aria-hidden="true">01</div>
-          <h3>Rutinas a tu medida</h3>
-          <p>Eliges los ejercicios, las series y el descanso de cada día. Ves el volumen semanal por grupo muscular mientras construyes la rutina.</p>
+      <h2>Todas las funciones</h2>
+      <p class="section-lede">Todo lo que trae la versión actual de la app, agrupado por pantalla.</p>
+
+      <div class="feature-groups">
+        <article class="group">
+          <h3>Rutinas</h3>
+          <ul>
+            <li>Asistente de rutina en 3 pasos: nivel de experiencia, días por semana (de 2 a 6) y ejercicios de cada día.</li>
+            <li>Series, repeticiones y descanso sugeridos según tu objetivo y tu nivel, con la explicación de cada número.</li>
+            <li>Volumen semanal por grupo muscular frente al mínimo efectivo, el rango óptimo y el máximo recuperable, con aviso de exceso.</li>
+            <li>Varias rutinas guardadas: activa la que toca, edítala, empieza de cero o elimínala.</li>
+            <li>Ejercicios a una sola pierna o brazo, reordenables, con descanso propio por ejercicio.</li>
+            <li>Superseries, opcionales (puedes ocultarlas desde la configuración).</li>
+            <li>Test de carga máxima (1RM): estima tu peso máximo a partir de una serie real y te sugiere el peso para tu rango de repeticiones.</li>
+          </ul>
         </article>
-        <article class="feature">
-          <div class="feature-icon" aria-hidden="true">02</div>
-          <h3>Registro en la serie</h3>
-          <p>Anotas peso y repeticiones mientras entrenas. Las series de caída, rest-pause y myo-reps también están contempladas.</p>
+
+        <article class="group">
+          <h3>Entrenar</h3>
+          <ul>
+            <li>Elige el día de tu rutina que toca, o entrena sin rutina con ejercicios elegidos al momento.</li>
+            <li>Registro de cada serie: repeticiones, peso y marca de serie completada.</li>
+            <li>Tipos de serie: drop-set, rest-pause, myo-reps, top-set con back-off y pirámide inversa.</li>
+            <li>Cronómetro de descanso entre series, con aviso al terminar y opción de desactivarlo.</li>
+            <li>Añade un ejercicio solo para hoy, sin tocar tu rutina guardada.</li>
+            <li>Ficha de cada ejercicio, con la explicación y su grupo muscular.</li>
+            <li>Finalizar la sesión la guarda en el historial. Descartarla pregunta si las series completadas deben contar para el volumen semanal.</li>
+          </ul>
         </article>
-        <article class="feature">
-          <div class="feature-icon" aria-hidden="true">03</div>
-          <h3>Descanso con aviso</h3>
-          <p>Un temporizador entre series que te avisa cuando toca, incluso con el móvil en reposo.</p>
+
+        <article class="group">
+          <h3>Historial</h3>
+          <ul>
+            <li>Gráfica de peso máximo por sesión, con las últimas 10 o todas las sesiones.</li>
+            <li>Máximo, mínimo y media de cada ejercicio.</li>
+            <li>Volumen semanal completado por grupo muscular.</li>
+            <li>Buscar por fecha en un calendario, o buscar un ejercicio por nombre o grupo muscular.</li>
+            <li>Resumen de cada sesión: series, carga total, calorías y tiempo.</li>
+            <li>Editar o descartar sesiones pasadas.</li>
+            <li>Compartir una tarjeta o un texto con tu sesión.</li>
+          </ul>
         </article>
-        <article class="feature">
-          <div class="feature-icon" aria-hidden="true">04</div>
-          <h3>Historial y marcas</h3>
-          <p>Consulta cada sesión, tus marcas personales y tu progreso por ejercicio, sin perderte entre fechas.</p>
+
+        <article class="group">
+          <h3>Inicio</h3>
+          <ul>
+            <li>Anillo de progreso con las series efectivas de la semana frente al objetivo.</li>
+            <li>Último peso y % de grasa guardados.</li>
+            <li>Acceso a la última sesión y botón para empezar el siguiente día de tu rutina.</li>
+            <li>Avisos de recuperación muscular.</li>
+            <li>Personaliza qué tarjetas ves y en qué orden.</li>
+          </ul>
+        </article>
+
+        <article class="group">
+          <h3>Perfil</h3>
+          <ul>
+            <li>Datos básicos: nombre, fecha de nacimiento, sexo, altura y peso.</li>
+            <li>Objetivo: ganar músculo, perder grasa, ganar fuerza o mantenimiento.</li>
+            <li>Porcentaje de grasa corporal con el método de la Marina de EE. UU. a partir de medidas.</li>
+            <li>Cálculos de metabolismo basal (TMB) y gasto energético diario (GETD).</li>
+          </ul>
+        </article>
+
+        <article class="group">
+          <h3>Ajustes y datos</h3>
+          <ul>
+            <li>Ocho temas de color, que se aplican al instante a toda la app.</li>
+            <li>Guardar y restaurar una copia de seguridad en un archivo que tú eliges.</li>
+            <li>Copia opcional en Google Drive, en una carpeta oculta que solo usa la app.</li>
+            <li>Borrar solo el perfil, solo el historial o todo.</li>
+            <li>Health Connect (solo Android): peso, grasa, altura, pasos, calorías y sesiones, cada tipo con su permiso.</li>
+            <li>Compartir un resumen de tu entrenamiento en Instagram o Facebook Stories (solo Android).</li>
+          </ul>
         </article>
       </div>
     </div>
