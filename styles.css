@@ -1,8 +1,12 @@
-/* Tokens tomados de src/theme/theme.ts (darkColors / claraColors) */
+/* Tokens tomados de src/store/themeStore.ts → PALETTES (src/theme/theme.ts).
+   Por defecto, "Original" (oscura). Los demás temas van abajo, en
+   `:root[data-theme="..."]`, con los mismos ids que la app. */
 :root {
+  color-scheme: dark;
   --background: #0a100c;
   --surface: #16211a;
   --surface-alt: #1d2a22;
+  --band: #0d1510;
   --border: rgba(255, 255, 255, 0.06);
   --border-strong: rgba(180, 244, 97, 0.2);
   --primary: #b4f461;
@@ -13,7 +17,6 @@
   --text: #f2f5f0;
   --text-muted: #8b978c;
   --text-faint: #7e9184;
-  --halo: rgba(180, 244, 97, 0.18);
   --radius-sm: 14px;
   --radius-md: 22px;
   --radius-lg: 28px;
@@ -21,7 +24,121 @@
   --max: 1080px;
 }
 
-/* Siempre oscuro: el diseño de Claude Design y la app usan el tema oscuro por defecto */
+/* ---------- Temas de la app (mismos nombres que el selector de Ajustes) ---------- */
+:root[data-theme="clara"] {
+  color-scheme: light;
+  --background: #eff7f6;
+  --surface: #fbfefe;
+  --surface-alt: #dceeec;
+  --band: #e3f1ef;
+  --border: rgba(10, 40, 45, 0.1);
+  --border-strong: rgba(20, 108, 148, 0.35);
+  --primary: #146c94;
+  --primary-dark: #105473;
+  --on-primary: #f5fdfc;
+  --primary-soft: rgba(20, 108, 148, 0.16);
+  --accent: #e3a857;
+  --text: #16323a;
+  --text-muted: #4f6b73;
+  --text-faint: #6e8890;
+}
+:root[data-theme="relax"] {
+  color-scheme: light;
+  --background: #f3f1ec;
+  --surface: #faf9f6;
+  --surface-alt: #e8e5dd;
+  --band: #eae7df;
+  --border: rgba(31, 30, 27, 0.12);
+  --border-strong: rgba(31, 30, 27, 0.35);
+  --primary: #1f1e1b;
+  --primary-dark: #0f0e0c;
+  --on-primary: #f3f1ec;
+  --primary-soft: rgba(31, 30, 27, 0.1);
+  --accent: #5a5850;
+  --text: #1c1b18;
+  --text-muted: #6b6862;
+  --text-faint: #8c887f;
+}
+:root[data-theme="neon"] {
+  --background: #0b1020;
+  --surface: #171d2e;
+  --surface-alt: #212739;
+  --band: #0e1426;
+  --border: rgba(233, 241, 255, 0.08);
+  --border-strong: rgba(0, 245, 255, 0.35);
+  --primary: #00f5ff;
+  --primary-dark: #00c4cc;
+  --on-primary: #05070f;
+  --primary-soft: rgba(0, 245, 255, 0.16);
+  --accent: #ff2bd6;
+  --text: #e9f1ff;
+  --text-muted: #8890a8;
+  --text-faint: #6b7286;
+}
+:root[data-theme="astro"] {
+  --background: #05060a;
+  --surface: #141826;
+  --surface-alt: #2b2f3a;
+  --band: #0a0c12;
+  --border: rgba(241, 245, 249, 0.08);
+  --border-strong: rgba(255, 183, 3, 0.35);
+  --primary: #ffb703;
+  --primary-dark: #cc9202;
+  --on-primary: #05060a;
+  --primary-soft: rgba(255, 183, 3, 0.18);
+  --accent: #8ab4ff;
+  --text: #f1f5f9;
+  --text-muted: #8b8f94;
+  --text-faint: #6b6e73;
+}
+:root[data-theme="menta"] {
+  --background: #061a18;
+  --surface: #132725;
+  --surface-alt: #1c312e;
+  --band: #081f1c;
+  --border: rgba(226, 255, 246, 0.08);
+  --border-strong: rgba(0, 245, 160, 0.35);
+  --primary: #00f5a0;
+  --primary-dark: #00b878;
+  --on-primary: #052017;
+  --primary-soft: rgba(0, 245, 160, 0.16);
+  --accent: #2dd4bf;
+  --text: #e2fff6;
+  --text-muted: #94a3b8;
+  --text-faint: #6c7d8b;
+}
+:root[data-theme="prisma"] {
+  --background: #0b1320;
+  --surface: #182032;
+  --surface-alt: #2a3140;
+  --band: #0e1829;
+  --border: rgba(229, 231, 235, 0.08);
+  --border-strong: rgba(56, 189, 248, 0.35);
+  --primary: #38bdf8;
+  --primary-dark: #2d97c6;
+  --on-primary: #071019;
+  --primary-soft: rgba(56, 189, 248, 0.18);
+  --accent: #22c55e;
+  --text: #e5e7eb;
+  --text-muted: #9aa0aa;
+  --text-faint: #7a8088;
+}
+:root[data-theme="lavanda"] {
+  --background: #120b24;
+  --surface: #1e1436;
+  --surface-alt: #2a1d4a;
+  --band: #170e2e;
+  --border: rgba(244, 238, 255, 0.08);
+  --border-strong: rgba(162, 237, 255, 0.35);
+  --primary: #c9b1ff;
+  --primary-dark: #9b7ae0;
+  --on-primary: #1a0f30;
+  --primary-soft: rgba(201, 177, 255, 0.16);
+  --accent: #ffcaf2;
+  --text: #f4eeff;
+  --text-muted: #a79bc7;
+  --text-faint: #8b7fa8;
+}
 
 * { box-sizing: border-box; }
 
@@ -31,7 +148,7 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--text);
-  font-family: "Outfit", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   overflow-x: hidden;
@@ -63,7 +180,7 @@ img { display: block; max-width: 100%; }
   width: 60vw;
   max-width: 640px;
   aspect-ratio: 1;
-  background: radial-gradient(circle, var(--halo) 0%, transparent 65%);
+  background: radial-gradient(circle, color-mix(in srgb, var(--primary) 18%, transparent) 0%, transparent 65%);
   z-index: -1;
   pointer-events: none;
 }
@@ -419,7 +536,7 @@ h2 {
 .head { display: flex; flex-direction: column; gap: 12px; max-width: 620px; margin-bottom: 36px; }
 .head h2 { margin: 0; }
 .head .section-lede { margin: 0; }
-.band { background: #0d1510; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.band { background: var(--band); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 
 .steps .card { height: 100%; }
 .steps .step-n {
@@ -626,6 +743,41 @@ h2 {
   .feature-groups { grid-template-columns: repeat(2, 1fr); }
   .phone { width: 300px; }
 }
+
+/* ---------- Selector de tema ---------- */
+.theme-picker { display: flex; flex-wrap: wrap; gap: 10px; }
+.theme-opt {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 42px;
+  padding: 0 16px 0 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  color: var(--text-muted);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.theme-opt:hover { color: var(--text); background: var(--primary-soft); }
+.theme-opt[aria-checked="true"] {
+  color: var(--text);
+  background: var(--primary-soft);
+  border-color: var(--primary);
+}
+/* Muestra del tema: mitad fondo, mitad color principal (valores fijos de cada tema) */
+.theme-opt .sw {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--sw-bg) 50%, var(--sw-fg) 50%);
+  box-shadow: inset 0 0 0 1px rgba(127, 127, 127, 0.35);
+}
+.doc .theme-picker { margin-top: 24px; }
 
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }

@@ -9,12 +9,14 @@
   <meta property="og:title" content="SETRYA — Rutinas guiadas por tu perfil y tu objetivo">
   <meta property="og:description" content="Asistente de rutina, registro de series, descanso con aviso e historial con gráficas. Todo en tu dispositivo.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/capturas/asistente.webp">
+  <meta property="og:image" content="assets/capturas/oscura/asistente.webp">
   <link rel="icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>try{var t=localStorage.getItem('setrya-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <script src="theme.js" defer></script>
 </head>
 <body>
 
@@ -53,7 +55,7 @@
 
       <div class="hero-visual">
         <figure class="phone">
-          <img src="assets/capturas/asistente.webp" alt="Asistente de rutina de SETRYA, paso 1: elegir el nivel de experiencia" width="540" height="1200">
+          <img data-shot="asistente" src="assets/capturas/oscura/asistente.webp" alt="Asistente de rutina de SETRYA, paso 1: elegir el nivel de experiencia" width="540" height="1200">
         </figure>
       </div>
     </div>
@@ -96,38 +98,58 @@
 
       <div class="gallery">
         <figure class="shot">
-          <div class="shot-frame"><img src="assets/capturas/inicio.webp" alt="Pantalla de Inicio con el progreso semanal y la siguiente sesión" loading="lazy" width="540" height="1200"></div>
+          <div class="shot-frame"><img data-shot="inicio" src="assets/capturas/oscura/inicio.webp" alt="Pantalla de Inicio con el progreso semanal y la siguiente sesión" loading="lazy" width="540" height="1200"></div>
           <figcaption><strong>Inicio</strong> · progreso de la semana y la siguiente sesión.</figcaption>
         </figure>
         <figure class="shot">
-          <div class="shot-frame"><img src="assets/capturas/rutina-expandida.webp" alt="Rutina con sus días, volumen semanal y ejercicios" loading="lazy" width="540" height="1200"></div>
+          <div class="shot-frame"><img data-shot="rutina-expandida" src="assets/capturas/oscura/rutina-expandida.webp" alt="Rutina con sus días, volumen semanal y ejercicios" loading="lazy" width="540" height="1200"></div>
           <figcaption><strong>Rutina</strong> · días, ejercicios y los números que propone la app.</figcaption>
         </figure>
         <figure class="shot">
-          <div class="shot-frame"><img src="assets/capturas/entrenar.webp" alt="Pantalla de Entrenar para registrar las series" loading="lazy" width="540" height="1200"></div>
+          <div class="shot-frame"><img data-shot="entrenar" src="assets/capturas/oscura/entrenar.webp" alt="Pantalla de Entrenar para registrar las series" loading="lazy" width="540" height="1200"></div>
           <figcaption><strong>Entrenar</strong> · registras peso y repeticiones de cada serie.</figcaption>
         </figure>
         <figure class="shot">
-          <div class="shot-frame"><img src="assets/capturas/grafica-historial.webp" alt="Gráfica de peso máximo por sesión de un ejercicio" loading="lazy" width="540" height="1200"></div>
+          <div class="shot-frame"><img data-shot="grafica-historial" src="assets/capturas/oscura/grafica-historial.webp" alt="Gráfica de peso máximo por sesión de un ejercicio" loading="lazy" width="540" height="1200"></div>
           <figcaption><strong>Historial</strong> · progreso de cada ejercicio, sesión a sesión.</figcaption>
         </figure>
       </div>
 
       <div class="videos">
         <div class="card clip">
-          <video src="assets/capturas/inicio-animacion.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Animación del anillo de progreso en la pantalla de Inicio"></video>
+          <video data-clip="inicio-animacion" src="assets/capturas/oscura/inicio-animacion.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Animación del anillo de progreso en la pantalla de Inicio"></video>
           <div>
             <span class="overline">Inicio</span>
             <p>El anillo de progreso se anima al abrir la app.</p>
           </div>
         </div>
         <div class="card clip">
-          <video src="assets/capturas/grafica-animacion.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Animación de la gráfica de progreso al cambiar el rango de sesiones"></video>
+          <video data-clip="grafica-animacion" src="assets/capturas/oscura/grafica-animacion.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Animación de la gráfica de progreso al cambiar el rango de sesiones"></video>
           <div>
             <span class="overline">Historial</span>
             <p>Las gráficas se animan al cambiar el rango de sesiones.</p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="temas">
+    <div class="wrap">
+      <div class="head">
+        <span class="overline">Temas</span>
+        <h2>Ocho temas, los de la app</h2>
+        <p class="section-lede">Prueba cómo se ve SETRYA con cada tema. Es solo una vista previa de esta página: se recuerda en este navegador y no cambia la app.</p>
+      </div>
+      <div class="theme-picker" role="radiogroup" aria-label="Tema de color">
+        <button type="button" class="theme-opt" role="radio" aria-checked="true" data-theme-id="oscura" style="--sw-bg:#0A100C;--sw-fg:#B4F461"><span class="sw" aria-hidden="true"></span>Original</button>
+        <button type="button" class="theme-opt" role="radio" aria-checked="false" data-theme-id="clara" style="--sw-bg:#EFF7F6;--sw-fg:#146C94"><span class="sw" aria-hidden="true"></span>Océano</button>
+        <button type="button" class="theme-opt" role="radio" aria-checked="false" data-theme-id="relax" style="--sw-bg:#F3F1EC;--sw-fg:#1F1E1B"><span class="sw" aria-hidden="true"></span>Relax</button>
+        <button type="button" class="theme-opt" role="radio" aria-checked="false" data-theme-id="neon" style="--sw-bg:#0B1020;--sw-fg:#00F5FF"><span class="sw" aria-hidden="true"></span>Neon</button>
+        <button type="button" class="theme-opt" role="radio" aria-checked="false" data-theme-id="astro" style="--sw-bg:#05060A;--sw-fg:#FFB703"><span class="sw" aria-hidden="true"></span>Astro</button>
+        <button type="button" class="theme-opt" role="radio" aria-checked="false" data-theme-id="menta" style="--sw-bg:#061A18;--sw-fg:#00F5A0"><span class="sw" aria-hidden="true"></span>Menta</button>
+        <button type="button" class="theme-opt" role="radio" aria-checked="false" data-theme-id="prisma" style="--sw-bg:#0B1320;--sw-fg:#38BDF8"><span class="sw" aria-hidden="true"></span>Prisma</button>
+        <button type="button" class="theme-opt" role="radio" aria-checked="false" data-theme-id="lavanda" style="--sw-bg:#120B24;--sw-fg:#C9B1FF"><span class="sw" aria-hidden="true"></span>Lavanda</button>
       </div>
     </div>
   </section>
