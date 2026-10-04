@@ -21,41 +21,7 @@
   --max: 1080px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) {
-    --background: #eff7f6;
-    --surface: #fbfefe;
-    --surface-alt: #dceeec;
-    --border: rgba(10, 40, 45, 0.1);
-    --border-strong: rgba(20, 108, 148, 0.35);
-    --primary: #146c94;
-    --primary-dark: #105473;
-    --on-primary: #f5fdfc;
-    --primary-soft: rgba(20, 108, 148, 0.16);
-    --accent: #e3a857;
-    --text: #16323a;
-    --text-muted: #4f6b73;
-    --text-faint: #6e8890;
-    --halo: rgba(20, 108, 148, 0.16);
-  }
-}
-
-:root[data-theme="light"] {
-  --background: #eff7f6;
-  --surface: #fbfefe;
-  --surface-alt: #dceeec;
-  --border: rgba(10, 40, 45, 0.1);
-  --border-strong: rgba(20, 108, 148, 0.35);
-  --primary: #146c94;
-  --primary-dark: #105473;
-  --on-primary: #f5fdfc;
-  --primary-soft: rgba(20, 108, 148, 0.16);
-  --accent: #e3a857;
-  --text: #16323a;
-  --text-muted: #4f6b73;
-  --text-faint: #6e8890;
-  --halo: rgba(20, 108, 148, 0.16);
-}
+/* Siempre oscuro: el diseño de Claude Design y la app usan el tema oscuro por defecto */
 
 * { box-sizing: border-box; }
 
@@ -161,7 +127,7 @@ img { display: block; max-width: 100%; }
 .btn-primary:hover { background: var(--primary-dark); }
 .btn-ghost { background: transparent; color: var(--text); border-color: var(--border-strong); }
 .btn-ghost:hover { background: var(--primary-soft); }
-.btn-disabled { opacity: 0.55; cursor: default; pointer-events: none; }
+.btn-disabled { cursor: default; pointer-events: none; }
 
 .nav-soon {
   color: var(--text-faint);
@@ -454,7 +420,6 @@ h2 {
 .head h2 { margin: 0; }
 .head .section-lede { margin: 0; }
 .band { background: #0d1510; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-:root:not([data-theme="dark"]) .band { background: var(--surface-alt); }
 
 .steps .card { height: 100%; }
 .steps .step-n {
