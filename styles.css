@@ -161,6 +161,19 @@ img { display: block; max-width: 100%; }
 .btn-primary:hover { background: var(--primary-dark); }
 .btn-ghost { background: transparent; color: var(--text); border-color: var(--border-strong); }
 .btn-ghost:hover { background: var(--primary-soft); }
+.btn-disabled { opacity: 0.55; cursor: default; pointer-events: none; }
+
+.nav-soon {
+  color: var(--text-faint);
+  font-size: 13px;
+  padding: 8px 10px;
+  border: 1px dashed var(--border-strong);
+  border-radius: 999px;
+}
+
+.announce { text-align: center; max-width: 620px; margin: 0 auto; }
+.announce .badge { margin: 0 auto 16px; display: inline-block; }
+.announce .section-lede { margin-left: auto; margin-right: auto; }
 
 /* ---------- Hero ---------- */
 .hero { padding: 64px 0 56px; }
