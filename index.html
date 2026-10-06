@@ -36,6 +36,11 @@
 
 <main>
 
+  <div class="intro" id="intro" aria-label="Vídeo de presentación de Setrya">
+    <video id="intro-video" src="assets/video/setrya-promo.mp4" autoplay muted playsinline preload="auto"></video>
+    <button type="button" class="intro-skip" id="intro-skip">Saltar</button>
+  </div>
+
   <section class="hero halo">
     <div class="wrap hero-grid">
       <div class="hero-copy">
@@ -131,19 +136,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="block" id="video">
-    <div class="wrap">
-      <div class="head">
-        <span class="overline">Vídeo</span>
-        <h2>Setrya en 45 segundos</h2>
-        <p class="section-lede">Rutinas, volumen frente al mínimo efectivo, descanso muscular y progreso.</p>
-      </div>
-      <figure class="shot">
-        <video src="assets/video/setrya-promo.mp4" controls playsinline preload="metadata" aria-label="Vídeo promocional de Setrya de 45 segundos"></video>
-      </figure>
     </div>
   </section>
 
@@ -309,5 +301,27 @@
   </div>
 </footer>
 
+  <script>
+    (function () {
+      var intro = document.getElementById('intro');
+      var video = document.getElementById('intro-video');
+      var skip = document.getElementById('intro-skip');
+      if (!intro || !video) return;
+      var closed = false;
+      function close() {
+        if (closed) return;
+        closed = true;
+        video.pause();
+        intro.classList.add('is-done');
+        intro.addEventListener('transitionend', function done() {
+          intro.removeEventListener('transitionend', done);
+          intro.hidden = true;
+        });
+      }
+      video.addEventListener('ended', close);
+      skip.addEventListener('click', close);
+      video.play().catch(function () { /* autoplay bloqueado: el usuario puede saltar */ });
+    })();
+  </script>
 </body>
 </html>
