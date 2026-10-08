@@ -185,6 +185,42 @@ img { display: block; max-width: 100%; }
   pointer-events: none;
 }
 
+/* ---------- Aviso de testers ---------- */
+.tester-banner {
+  background: var(--primary-soft);
+  border-bottom: 1px solid var(--border-strong);
+}
+.tester-banner-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px 16px;
+  padding: 10px var(--gutter);
+  text-align: center;
+}
+.tester-banner-row p { margin: 0; font-size: 14px; color: var(--text); }
+.tester-banner-actions { display: flex; align-items: center; gap: 10px; flex: none; }
+.tester-banner .btn-primary { min-height: 36px; padding: 0 18px; font-size: 14px; }
+.tester-banner-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 999px;
+}
+.tester-banner-close:hover { color: var(--text); background: var(--surface-alt); }
+@media (min-width: 760px) {
+  .tester-banner-row { flex-wrap: nowrap; justify-content: center; text-align: left; }
+}
+
 /* ---------- Cabecera ---------- */
 .site-header {
   position: sticky;
