@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SETRYA — Rutinas guiadas por tu perfil y tu objetivo</title>
-  <meta name="description" content="SETRYA te propone series, repeticiones y descansos según tu objetivo y tu nivel. Todo se guarda en tu móvil: sin cuenta, sin servidor y sin publicidad.">
+  <title data-i18n="meta.title">SETRYA — Rutinas guiadas por tu perfil y tu objetivo</title>
+  <meta name="description" content="SETRYA te propone series, repeticiones y descansos según tu objetivo y tu nivel. Todo se guarda en tu móvil: sin cuenta, sin servidor y sin publicidad." data-i18n-content="meta.description">
   <meta name="theme-color" content="#0a100c">
-  <meta property="og:title" content="SETRYA — Rutinas guiadas por tu perfil y tu objetivo">
-  <meta property="og:description" content="Asistente de rutina, registro de series, descanso con aviso e historial con gráficas. Todo en tu dispositivo.">
+  <meta property="og:title" content="SETRYA — Rutinas guiadas por tu perfil y tu objetivo" data-i18n-content="meta.ogTitle">
+  <meta property="og:description" content="Asistente de rutina, registro de series, descanso con aviso e historial con gráficas. Todo en tu dispositivo." data-i18n-content="meta.ogDescription">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/capturas/oscura/asistente.webp">
   <link rel="icon" href="assets/favicon.png">
@@ -17,16 +17,17 @@
   <link rel="stylesheet" href="styles.css">
   <script>try{var t=localStorage.getItem('setrya-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
   <script src="theme.js" defer></script>
+  <script src="i18n.js" defer></script>
 </head>
 <body>
 
 <!-- Aviso temporal de reclutamiento de testers (oct-nov 2026). Quitar cuando se cubran las 16 plazas o acabe el test cerrado. -->
 <div class="tester-banner" id="tester-banner">
   <div class="wrap tester-banner-row">
-    <p><strong>Buscamos 16 testers</strong> antes del lanzamiento en Google Play — app gratis para siempre + llavero.</p>
+    <p data-i18n-html="banner.text"><strong>Buscamos 16 testers</strong> antes del lanzamiento en Google Play — app gratis para siempre + llavero.</p>
     <div class="tester-banner-actions">
-      <a class="btn btn-primary" href="https://forms.gle/VAEw3dKkfmaMYDNA8" target="_blank" rel="noopener">Apúntate</a>
-      <button type="button" class="tester-banner-close" id="tester-banner-close" aria-label="Cerrar aviso">×</button>
+      <a class="btn btn-primary" href="https://forms.gle/VAEw3dKkfmaMYDNA8" target="_blank" rel="noopener" data-i18n="banner.cta">Apúntate</a>
+      <button type="button" class="tester-banner-close" id="tester-banner-close" data-i18n-aria-label="banner.close" aria-label="Cerrar aviso">×</button>
     </div>
   </div>
 </div>
@@ -55,9 +56,13 @@
       SETRYA
     </a>
     <nav class="nav" aria-label="Principal">
-      <a href="#como-funciona">Cómo funciona</a>
-      <a class="hide-sm" href="#funciones">Funciones</a>
-      <a href="#privacidad">Privacidad</a>
+      <a href="#como-funciona" data-i18n="header.howItWorks">Cómo funciona</a>
+      <a class="hide-sm" href="#funciones" data-i18n="header.features">Funciones</a>
+      <a href="#privacidad" data-i18n="header.privacy">Privacidad</a>
+      <div class="lang-switch" role="group" data-i18n-aria-label="header.langLabel" aria-label="Idioma">
+        <button type="button" class="lang-opt" data-lang-id="es" aria-pressed="true">ES</button>
+        <button type="button" class="lang-opt" data-lang-id="en" aria-pressed="false">EN</button>
+      </div>
     </nav>
   </div>
 </header>
@@ -66,29 +71,29 @@
 
   <div class="intro" id="intro" aria-label="Vídeo de presentación de Setrya">
     <video id="intro-video" src="assets/video/setrya-promo.mp4" autoplay muted playsinline preload="auto"></video>
-    <button type="button" class="intro-skip" id="intro-skip">Saltar</button>
+    <button type="button" class="intro-skip" id="intro-skip" data-i18n="intro.skip">Saltar</button>
   </div>
 
   <section class="hero halo">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <span class="pill">Entrenamiento de fuerza</span>
-        <h1>Rutinas guiadas por tu perfil y tu <span class="accent">objetivo</span>.</h1>
-        <p class="lede">SETRYA te propone series, repeticiones y descansos según si quieres ganar músculo, perder grasa, ganar fuerza o mantenerte, y según tu nivel. Tú eliges los ejercicios; la app te dice cuánto volumen tiene sentido por grupo muscular.</p>
+        <span class="pill" data-i18n="hero.badge">Entrenamiento de fuerza</span>
+        <h1 data-i18n-html="hero.title">Rutinas guiadas por tu perfil y tu <span class="accent">objetivo</span>.</h1>
+        <p class="lede" data-i18n="hero.lede">SETRYA te propone series, repeticiones y descansos según si quieres ganar músculo, perder grasa, ganar fuerza o mantenerte, y según tu nivel. Tú eliges los ejercicios; la app te dice cuánto volumen tiene sentido por grupo muscular.</p>
         <div class="cta-row">
-          <span class="btn btn-primary btn-disabled" aria-disabled="true">Próximamente en Play Store</span>
-          <a class="btn btn-ghost" href="privacidad/">Política de privacidad</a>
+          <span class="btn btn-primary btn-disabled" aria-disabled="true" data-i18n="hero.ctaSoon">Próximamente en Play Store</span>
+          <a class="btn btn-ghost" href="privacidad/" data-i18n="hero.ctaPrivacy">Política de privacidad</a>
         </div>
         <ul class="trust">
-          <li><span class="ic" style="--icon:url(assets/icons/user-x.svg)"></span>Sin cuenta</li>
-          <li><span class="ic" style="--icon:url(assets/icons/smartphone.svg)"></span>Todo en tu móvil</li>
-          <li><span class="ic" style="--icon:url(assets/icons/ban.svg)"></span>Sin publicidad</li>
+          <li><span class="ic" style="--icon:url(assets/icons/user-x.svg)"></span><span data-i18n="hero.trustNoAccount">Sin cuenta</span></li>
+          <li><span class="ic" style="--icon:url(assets/icons/smartphone.svg)"></span><span data-i18n="hero.trustAllOnPhone">Todo en tu móvil</span></li>
+          <li><span class="ic" style="--icon:url(assets/icons/ban.svg)"></span><span data-i18n="hero.trustNoAds">Sin publicidad</span></li>
         </ul>
       </div>
 
       <div class="hero-visual">
         <figure class="phone">
-          <img data-shot="asistente" src="assets/capturas/oscura/asistente.webp" alt="Asistente de rutina de SETRYA, paso 1: elegir el nivel de experiencia" width="540" height="1200">
+          <img data-shot="asistente" src="assets/capturas/oscura/asistente.webp" data-i18n-alt="hero.visualAlt" alt="Asistente de rutina de SETRYA, paso 1: elegir el nivel de experiencia" width="540" height="1200">
         </figure>
       </div>
     </div>
@@ -97,25 +102,25 @@
   <section class="block" id="como-funciona">
     <div class="wrap">
       <div class="head">
-        <span class="overline">Cómo funciona</span>
-        <h2>Cómo te guía la app</h2>
-        <p class="section-lede">Tres pasos. Los números salen de tu perfil, no de una plantilla genérica.</p>
+        <span class="overline" data-i18n="how.overline">Cómo funciona</span>
+        <h2 data-i18n="how.title">Cómo te guía la app</h2>
+        <p class="section-lede" data-i18n="how.lede">Tres pasos. Los números salen de tu perfil, no de una plantilla genérica.</p>
       </div>
       <ol class="steps">
         <li class="card">
           <span class="step-n">1</span>
-          <h3>Tu perfil y tu objetivo</h3>
-          <p>Indicas sexo, altura, peso y si quieres ganar músculo, perder grasa, ganar fuerza o mantenerte. Con eso se calcula el volumen semanal que te corresponde.</p>
+          <h3 data-i18n="how.step1.title">Tu perfil y tu objetivo</h3>
+          <p data-i18n="how.step1.body">Indicas sexo, altura, peso y si quieres ganar músculo, perder grasa, ganar fuerza o mantenerte. Con eso se calcula el volumen semanal que te corresponde.</p>
         </li>
         <li class="card">
           <span class="step-n">2</span>
-          <h3>El asistente de rutina</h3>
-          <p>Eliges tu nivel y los días por semana, de 2 a 6. Para cada día añades ejercicios y la app te sugiere series, repeticiones y descanso, con el volumen de cada grupo muscular actualizado en vivo.</p>
+          <h3 data-i18n="how.step2.title">El asistente de rutina</h3>
+          <p data-i18n="how.step2.body">Eliges tu nivel y los días por semana, de 2 a 6. Para cada día añades ejercicios y la app te sugiere series, repeticiones y descanso, con el volumen de cada grupo muscular actualizado en vivo.</p>
         </li>
         <li class="card">
           <span class="step-n">3</span>
-          <h3>Entrenar y revisar</h3>
-          <p>La app te dice qué día toca, registras peso y repeticiones de cada serie y descansas con el cronómetro. Después ves tu progreso en el historial.</p>
+          <h3 data-i18n="how.step3.title">Entrenar y revisar</h3>
+          <p data-i18n="how.step3.body">La app te dice qué día toca, registras peso y repeticiones de cada serie y descansas con el cronómetro. Después ves tu progreso en el historial.</p>
         </li>
       </ol>
     </div>
@@ -124,43 +129,43 @@
   <section class="block band" id="capturas">
     <div class="wrap">
       <div class="head">
-        <span class="overline">La app</span>
-        <h2>Así se ve en el móvil</h2>
-        <p class="section-lede">Capturas reales de la app en un emulador de Android, con datos de ejemplo.</p>
+        <span class="overline" data-i18n="shots.overline">La app</span>
+        <h2 data-i18n="shots.title">Así se ve en el móvil</h2>
+        <p class="section-lede" data-i18n="shots.lede">Capturas reales de la app en un emulador de Android, con datos de ejemplo.</p>
       </div>
 
       <div class="gallery">
         <figure class="shot">
-          <div class="shot-frame"><img data-shot="inicio" src="assets/capturas/oscura/inicio.webp" alt="Pantalla de Inicio con el progreso semanal y la siguiente sesión" loading="lazy" width="540" height="1200"></div>
-          <figcaption><strong>Inicio</strong> · progreso de la semana y la siguiente sesión.</figcaption>
+          <div class="shot-frame"><img data-shot="inicio" src="assets/capturas/oscura/inicio.webp" data-i18n-alt="shots.inicio.alt" alt="Pantalla de Inicio con el progreso semanal y la siguiente sesión" loading="lazy" width="540" height="1200"></div>
+          <figcaption data-i18n-html="shots.inicio.caption"><strong>Inicio</strong> · progreso de la semana y la siguiente sesión.</figcaption>
         </figure>
         <figure class="shot">
-          <div class="shot-frame"><img data-shot="rutina-expandida" src="assets/capturas/oscura/rutina-expandida.webp" alt="Rutina con sus días, volumen semanal y ejercicios" loading="lazy" width="540" height="1200"></div>
-          <figcaption><strong>Rutina</strong> · días, ejercicios y los números que propone la app.</figcaption>
+          <div class="shot-frame"><img data-shot="rutina-expandida" src="assets/capturas/oscura/rutina-expandida.webp" data-i18n-alt="shots.rutina.alt" alt="Rutina con sus días, volumen semanal y ejercicios" loading="lazy" width="540" height="1200"></div>
+          <figcaption data-i18n-html="shots.rutina.caption"><strong>Rutina</strong> · días, ejercicios y los números que propone la app.</figcaption>
         </figure>
         <figure class="shot">
-          <div class="shot-frame"><img data-shot="entrenar" src="assets/capturas/oscura/entrenar.webp" alt="Pantalla de Entrenar para registrar las series" loading="lazy" width="540" height="1200"></div>
-          <figcaption><strong>Entrenar</strong> · registras peso y repeticiones de cada serie.</figcaption>
+          <div class="shot-frame"><img data-shot="entrenar" src="assets/capturas/oscura/entrenar.webp" data-i18n-alt="shots.entrenar.alt" alt="Pantalla de Entrenar para registrar las series" loading="lazy" width="540" height="1200"></div>
+          <figcaption data-i18n-html="shots.entrenar.caption"><strong>Entrenar</strong> · registras peso y repeticiones de cada serie.</figcaption>
         </figure>
         <figure class="shot">
-          <div class="shot-frame"><img data-shot="grafica-historial" src="assets/capturas/oscura/grafica-historial.webp" alt="Gráfica de peso máximo por sesión de un ejercicio" loading="lazy" width="540" height="1200"></div>
-          <figcaption><strong>Historial</strong> · progreso de cada ejercicio, sesión a sesión.</figcaption>
+          <div class="shot-frame"><img data-shot="grafica-historial" src="assets/capturas/oscura/grafica-historial.webp" data-i18n-alt="shots.historial.alt" alt="Gráfica de peso máximo por sesión de un ejercicio" loading="lazy" width="540" height="1200"></div>
+          <figcaption data-i18n-html="shots.historial.caption"><strong>Historial</strong> · progreso de cada ejercicio, sesión a sesión.</figcaption>
         </figure>
       </div>
 
       <div class="videos">
         <div class="card clip">
-          <video data-clip="inicio-animacion" src="assets/capturas/oscura/inicio-animacion.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Animación del anillo de progreso en la pantalla de Inicio"></video>
+          <video data-clip="inicio-animacion" src="assets/capturas/oscura/inicio-animacion.mp4" autoplay muted loop playsinline preload="metadata" data-i18n-aria-label="shots.clipInicio.ariaLabel" aria-label="Animación del anillo de progreso en la pantalla de Inicio"></video>
           <div>
-            <span class="overline">Inicio</span>
-            <p>El anillo de progreso se anima al abrir la app.</p>
+            <span class="overline" data-i18n="features.home.title">Inicio</span>
+            <p data-i18n="shots.clipInicio.caption">El anillo de progreso se anima al abrir la app.</p>
           </div>
         </div>
         <div class="card clip">
-          <video data-clip="grafica-animacion" src="assets/capturas/oscura/grafica-animacion.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Animación de la gráfica de progreso al cambiar el rango de sesiones"></video>
+          <video data-clip="grafica-animacion" src="assets/capturas/oscura/grafica-animacion.mp4" autoplay muted loop playsinline preload="metadata" data-i18n-aria-label="shots.clipGrafica.ariaLabel" aria-label="Animación de la gráfica de progreso al cambiar el rango de sesiones"></video>
           <div>
-            <span class="overline">Historial</span>
-            <p>Las gráficas se animan al cambiar el rango de sesiones.</p>
+            <span class="overline" data-i18n="features.history.title">Historial</span>
+            <p data-i18n="shots.clipGrafica.caption">Las gráficas se animan al cambiar el rango de sesiones.</p>
           </div>
         </div>
       </div>
@@ -170,19 +175,19 @@
   <section class="block" id="temas">
     <div class="wrap">
       <div class="head">
-        <span class="overline">Temas</span>
-        <h2>Ocho temas, los de la app</h2>
-        <p class="section-lede">Prueba cómo se ve SETRYA con cada tema. Es solo una vista previa de esta página: se recuerda en este navegador y no cambia la app.</p>
+        <span class="overline" data-i18n="themes.overline">Temas</span>
+        <h2 data-i18n="themes.title">Ocho temas, los de la app</h2>
+        <p class="section-lede" data-i18n="themes.lede">Prueba cómo se ve SETRYA con cada tema. Es solo una vista previa de esta página: se recuerda en este navegador y no cambia la app.</p>
       </div>
-      <div class="theme-picker" role="radiogroup" aria-label="Tema de color">
-        <button type="button" class="theme-opt" role="radio" aria-checked="true" data-theme-id="oscura" style="--sw-bg:#0A100C;--sw-fg:#B4F461"><span class="sw" aria-hidden="true"></span>Original</button>
-        <button type="button" class="theme-opt" role="radio" aria-checked="false" data-theme-id="clara" style="--sw-bg:#EFF7F6;--sw-fg:#146C94"><span class="sw" aria-hidden="true"></span>Océano</button>
-        <button type="button" class="theme-opt" role="radio" aria-checked="false" data-theme-id="relax" style="--sw-bg:#F3F1EC;--sw-fg:#1F1E1B"><span class="sw" aria-hidden="true"></span>Relax</button>
-        <button type="button" class="theme-opt" role="radio" aria-checked="false" data-theme-id="neon" style="--sw-bg:#0B1020;--sw-fg:#00F5FF"><span class="sw" aria-hidden="true"></span>Neon</button>
-        <button type="button" class="theme-opt" role="radio" aria-checked="false" data-theme-id="astro" style="--sw-bg:#05060A;--sw-fg:#FFB703"><span class="sw" aria-hidden="true"></span>Astro</button>
-        <button type="button" class="theme-opt" role="radio" aria-checked="false" data-theme-id="menta" style="--sw-bg:#061A18;--sw-fg:#00F5A0"><span class="sw" aria-hidden="true"></span>Menta</button>
-        <button type="button" class="theme-opt" role="radio" aria-checked="false" data-theme-id="prisma" style="--sw-bg:#0B1320;--sw-fg:#38BDF8"><span class="sw" aria-hidden="true"></span>Prisma</button>
-        <button type="button" class="theme-opt" role="radio" aria-checked="false" data-theme-id="lavanda" style="--sw-bg:#120B24;--sw-fg:#C9B1FF"><span class="sw" aria-hidden="true"></span>Lavanda</button>
+      <div class="theme-picker" role="radiogroup" data-i18n-aria-label="themes.radiogroupLabel" aria-label="Tema de color">
+        <button type="button" class="theme-opt" role="radio" aria-checked="true" data-theme-id="oscura" style="--sw-bg:#0A100C;--sw-fg:#B4F461"><span class="sw" aria-hidden="true"></span><span data-i18n="themes.oscura">Original</span></button>
+        <button type="button" class="theme-opt" role="radio" aria-checked="false" data-theme-id="clara" style="--sw-bg:#EFF7F6;--sw-fg:#146C94"><span class="sw" aria-hidden="true"></span><span data-i18n="themes.clara">Océano</span></button>
+        <button type="button" class="theme-opt" role="radio" aria-checked="false" data-theme-id="relax" style="--sw-bg:#F3F1EC;--sw-fg:#1F1E1B"><span class="sw" aria-hidden="true"></span><span data-i18n="themes.relax">Relax</span></button>
+        <button type="button" class="theme-opt" role="radio" aria-checked="false" data-theme-id="neon" style="--sw-bg:#0B1020;--sw-fg:#00F5FF"><span class="sw" aria-hidden="true"></span><span data-i18n="themes.neon">Neon</span></button>
+        <button type="button" class="theme-opt" role="radio" aria-checked="false" data-theme-id="astro" style="--sw-bg:#05060A;--sw-fg:#FFB703"><span class="sw" aria-hidden="true"></span><span data-i18n="themes.astro">Astro</span></button>
+        <button type="button" class="theme-opt" role="radio" aria-checked="false" data-theme-id="menta" style="--sw-bg:#061A18;--sw-fg:#00F5A0"><span class="sw" aria-hidden="true"></span><span data-i18n="themes.menta">Menta</span></button>
+        <button type="button" class="theme-opt" role="radio" aria-checked="false" data-theme-id="prisma" style="--sw-bg:#0B1320;--sw-fg:#38BDF8"><span class="sw" aria-hidden="true"></span><span data-i18n="themes.prisma">Prisma</span></button>
+        <button type="button" class="theme-opt" role="radio" aria-checked="false" data-theme-id="lavanda" style="--sw-bg:#120B24;--sw-fg:#C9B1FF"><span class="sw" aria-hidden="true"></span><span data-i18n="themes.lavanda">Lavanda</span></button>
       </div>
     </div>
   </section>
@@ -190,81 +195,81 @@
   <section class="block" id="funciones">
     <div class="wrap">
       <div class="head">
-        <span class="overline">Funciones</span>
-        <h2>Todas las funciones</h2>
-        <p class="section-lede">Todo lo que trae la versión actual de la app, agrupado por pantalla.</p>
+        <span class="overline" data-i18n="features.overline">Funciones</span>
+        <h2 data-i18n="features.title">Todas las funciones</h2>
+        <p class="section-lede" data-i18n="features.lede">Todo lo que trae la versión actual de la app, agrupado por pantalla.</p>
       </div>
 
       <div class="feature-groups">
         <article class="card group">
-          <div class="group-head"><span class="ic-box"><span class="ic" style="--icon:url(assets/icons/clipboard-list.svg)"></span></span><h3>Rutinas</h3></div>
+          <div class="group-head"><span class="ic-box"><span class="ic" style="--icon:url(assets/icons/clipboard-list.svg)"></span></span><h3 data-i18n="features.routines.title">Rutinas</h3></div>
           <ul>
-            <li>Asistente de rutina en 3 pasos: nivel de experiencia, días por semana (de 2 a 6) y ejercicios de cada día.</li>
-            <li>Series, repeticiones y descanso sugeridos según tu objetivo y tu nivel, con la explicación de cada número.</li>
-            <li>Volumen semanal por grupo muscular frente al mínimo efectivo, el rango óptimo y el máximo recuperable, con aviso de exceso.</li>
-            <li>Varias rutinas guardadas: activa la que toca, edítala, empieza de cero o elimínala.</li>
-            <li>Ejercicios a una sola pierna o brazo, reordenables, con descanso propio por ejercicio.</li>
-            <li>Superseries, opcionales (puedes ocultarlas desde la configuración).</li>
-            <li>Test de carga máxima (1RM): estima tu peso máximo a partir de una serie real y te sugiere el peso para tu rango de repeticiones.</li>
+            <li data-i18n="features.routines.li1">Asistente de rutina en 3 pasos: nivel de experiencia, días por semana (de 2 a 6) y ejercicios de cada día.</li>
+            <li data-i18n="features.routines.li2">Series, repeticiones y descanso sugeridos según tu objetivo y tu nivel, con la explicación de cada número.</li>
+            <li data-i18n="features.routines.li3">Volumen semanal por grupo muscular frente al mínimo efectivo, el rango óptimo y el máximo recuperable, con aviso de exceso.</li>
+            <li data-i18n="features.routines.li4">Varias rutinas guardadas: activa la que toca, edítala, empieza de cero o elimínala.</li>
+            <li data-i18n="features.routines.li5">Ejercicios a una sola pierna o brazo, reordenables, con descanso propio por ejercicio.</li>
+            <li data-i18n="features.routines.li6">Superseries, opcionales (puedes ocultarlas desde la configuración).</li>
+            <li data-i18n="features.routines.li7">Test de carga máxima (1RM): estima tu peso máximo a partir de una serie real y te sugiere el peso para tu rango de repeticiones.</li>
           </ul>
         </article>
 
         <article class="card group">
-          <div class="group-head"><span class="ic-box"><span class="ic" style="--icon:url(assets/icons/dumbbell.svg)"></span></span><h3>Entrenar</h3></div>
+          <div class="group-head"><span class="ic-box"><span class="ic" style="--icon:url(assets/icons/dumbbell.svg)"></span></span><h3 data-i18n="features.train.title">Entrenar</h3></div>
           <ul>
-            <li>Elige el día de tu rutina que toca, o entrena sin rutina con ejercicios elegidos al momento.</li>
-            <li>Registro de cada serie: repeticiones, peso y marca de serie completada.</li>
-            <li>Tipos de serie: drop-set, rest-pause, myo-reps, top-set con back-off y pirámide inversa.</li>
-            <li>Cronómetro de descanso entre series, con aviso al terminar y opción de desactivarlo.</li>
-            <li>Añade un ejercicio solo para hoy, sin tocar tu rutina guardada.</li>
-            <li>Ficha de cada ejercicio, con la explicación y su grupo muscular.</li>
-            <li>Finalizar la sesión la guarda en el historial. Descartarla pregunta si las series completadas deben contar para el volumen semanal.</li>
+            <li data-i18n="features.train.li1">Elige el día de tu rutina que toca, o entrena sin rutina con ejercicios elegidos al momento.</li>
+            <li data-i18n="features.train.li2">Registro de cada serie: repeticiones, peso y marca de serie completada.</li>
+            <li data-i18n="features.train.li3">Tipos de serie: drop-set, rest-pause, myo-reps, top-set con back-off y pirámide inversa.</li>
+            <li data-i18n="features.train.li4">Cronómetro de descanso entre series, con aviso al terminar y opción de desactivarlo.</li>
+            <li data-i18n="features.train.li5">Añade un ejercicio solo para hoy, sin tocar tu rutina guardada.</li>
+            <li data-i18n="features.train.li6">Ficha de cada ejercicio, con la explicación y su grupo muscular.</li>
+            <li data-i18n="features.train.li7">Finalizar la sesión la guarda en el historial. Descartarla pregunta si las series completadas deben contar para el volumen semanal.</li>
           </ul>
         </article>
 
         <article class="card group">
-          <div class="group-head"><span class="ic-box"><span class="ic" style="--icon:url(assets/icons/history.svg)"></span></span><h3>Historial</h3></div>
+          <div class="group-head"><span class="ic-box"><span class="ic" style="--icon:url(assets/icons/history.svg)"></span></span><h3 data-i18n="features.history.title">Historial</h3></div>
           <ul>
-            <li>Gráfica de peso máximo por sesión, con las últimas 10 o todas las sesiones.</li>
-            <li>Máximo, mínimo y media de cada ejercicio.</li>
-            <li>Volumen semanal completado por grupo muscular.</li>
-            <li>Buscar por fecha en un calendario, o buscar un ejercicio por nombre o grupo muscular.</li>
-            <li>Resumen de cada sesión: series, carga total, calorías y tiempo.</li>
-            <li>Editar o descartar sesiones pasadas.</li>
-            <li>Compartir una tarjeta o un texto con tu sesión.</li>
+            <li data-i18n="features.history.li1">Gráfica de peso máximo por sesión, con las últimas 10 o todas las sesiones.</li>
+            <li data-i18n="features.history.li2">Máximo, mínimo y media de cada ejercicio.</li>
+            <li data-i18n="features.history.li3">Volumen semanal completado por grupo muscular.</li>
+            <li data-i18n="features.history.li4">Buscar por fecha en un calendario, o buscar un ejercicio por nombre o grupo muscular.</li>
+            <li data-i18n="features.history.li5">Resumen de cada sesión: series, carga total, calorías y tiempo.</li>
+            <li data-i18n="features.history.li6">Editar o descartar sesiones pasadas.</li>
+            <li data-i18n="features.history.li7">Compartir una tarjeta o un texto con tu sesión.</li>
           </ul>
         </article>
 
         <article class="card group">
-          <div class="group-head"><span class="ic-box"><span class="ic" style="--icon:url(assets/icons/house.svg)"></span></span><h3>Inicio</h3></div>
+          <div class="group-head"><span class="ic-box"><span class="ic" style="--icon:url(assets/icons/house.svg)"></span></span><h3 data-i18n="features.home.title">Inicio</h3></div>
           <ul>
-            <li>Anillo de progreso con las series efectivas de la semana frente al objetivo.</li>
-            <li>Último peso y % de grasa guardados.</li>
-            <li>Acceso a la última sesión y botón para empezar el siguiente día de tu rutina.</li>
-            <li>Avisos de recuperación muscular.</li>
-            <li>Personaliza qué tarjetas ves y en qué orden.</li>
+            <li data-i18n="features.home.li1">Anillo de progreso con las series efectivas de la semana frente al objetivo.</li>
+            <li data-i18n="features.home.li2">Último peso y % de grasa guardados.</li>
+            <li data-i18n="features.home.li3">Acceso a la última sesión y botón para empezar el siguiente día de tu rutina.</li>
+            <li data-i18n="features.home.li4">Avisos de recuperación muscular.</li>
+            <li data-i18n="features.home.li5">Personaliza qué tarjetas ves y en qué orden.</li>
           </ul>
         </article>
 
         <article class="card group">
-          <div class="group-head"><span class="ic-box"><span class="ic" style="--icon:url(assets/icons/user.svg)"></span></span><h3>Perfil</h3></div>
+          <div class="group-head"><span class="ic-box"><span class="ic" style="--icon:url(assets/icons/user.svg)"></span></span><h3 data-i18n="features.profile.title">Perfil</h3></div>
           <ul>
-            <li>Datos básicos: nombre, fecha de nacimiento, sexo, altura y peso.</li>
-            <li>Objetivo: ganar músculo, perder grasa, ganar fuerza o mantenimiento.</li>
-            <li>Porcentaje de grasa corporal con el método de la Marina de EE. UU. a partir de medidas.</li>
-            <li>Cálculos de metabolismo basal (TMB) y gasto energético diario (GETD).</li>
+            <li data-i18n="features.profile.li1">Datos básicos: nombre, fecha de nacimiento, sexo, altura y peso.</li>
+            <li data-i18n="features.profile.li2">Objetivo: ganar músculo, perder grasa, ganar fuerza o mantenimiento.</li>
+            <li data-i18n="features.profile.li3">Porcentaje de grasa corporal con el método de la Marina de EE. UU. a partir de medidas.</li>
+            <li data-i18n="features.profile.li4">Cálculos de metabolismo basal (TMB) y gasto energético diario (GETD).</li>
           </ul>
         </article>
 
         <article class="card group">
-          <div class="group-head"><span class="ic-box"><span class="ic" style="--icon:url(assets/icons/settings.svg)"></span></span><h3>Ajustes y datos</h3></div>
+          <div class="group-head"><span class="ic-box"><span class="ic" style="--icon:url(assets/icons/settings.svg)"></span></span><h3 data-i18n="features.settings.title">Ajustes y datos</h3></div>
           <ul>
-            <li>Ocho temas de color, que se aplican al instante a toda la app.</li>
-            <li>Guardar y restaurar una copia de seguridad en un archivo que tú eliges.</li>
-            <li>Copia opcional en Google Drive, en una carpeta oculta que solo usa la app.</li>
-            <li>Borrar solo el perfil, solo el historial o todo.</li>
-            <li>Health Connect (solo Android): peso, grasa, altura, pasos, calorías y sesiones, cada tipo con su permiso.</li>
-            <li>Compartir un resumen de tu entrenamiento en Instagram o Facebook Stories (solo Android).</li>
+            <li data-i18n="features.settings.li1">Ocho temas de color, que se aplican al instante a toda la app.</li>
+            <li data-i18n="features.settings.li2">Guardar y restaurar una copia de seguridad en un archivo que tú eliges.</li>
+            <li data-i18n="features.settings.li3">Copia opcional en Google Drive, en una carpeta oculta que solo usa la app.</li>
+            <li data-i18n="features.settings.li4">Borrar solo el perfil, solo el historial o todo.</li>
+            <li data-i18n="features.settings.li5">Health Connect (solo Android): peso, grasa, altura, pasos, calorías y sesiones, cada tipo con su permiso.</li>
+            <li data-i18n="features.settings.li6">Compartir un resumen de tu entrenamiento en Instagram o Facebook Stories (solo Android).</li>
           </ul>
         </article>
       </div>
@@ -275,31 +280,31 @@
     <div class="wrap">
       <div class="privacy-box">
         <div class="privacy-intro">
-          <span class="overline">Privacidad</span>
-          <h2>Tus datos se quedan contigo</h2>
-          <p class="section-lede">SETRYA no tiene cuenta de usuario ni servidor propio. Estas son las reglas de la app, sin letra pequeña.</p>
-          <a class="more" href="privacidad/">Leer la política de privacidad completa <span class="ic" style="--icon:url(assets/icons/arrow-right.svg)"></span></a>
+          <span class="overline" data-i18n="privacy.overline">Privacidad</span>
+          <h2 data-i18n="privacy.title">Tus datos se quedan contigo</h2>
+          <p class="section-lede" data-i18n="privacy.lede">SETRYA no tiene cuenta de usuario ni servidor propio. Estas son las reglas de la app, sin letra pequeña.</p>
+          <a class="more" href="privacidad/"><span data-i18n="privacy.moreLink">Leer la política de privacidad completa</span> <span class="ic" style="--icon:url(assets/icons/arrow-right.svg)"></span></a>
         </div>
         <div class="privacy-grid">
           <div>
             <span class="ic-box"><span class="ic" style="--icon:url(assets/icons/smartphone.svg)"></span></span>
-            <h3>Todo en tu dispositivo</h3>
-            <p>Perfil, rutinas e historial se guardan en una base de datos local.</p>
+            <h3 data-i18n="privacy.box1.title">Todo en tu dispositivo</h3>
+            <p data-i18n="privacy.box1.body">Perfil, rutinas e historial se guardan en una base de datos local.</p>
           </div>
           <div>
             <span class="ic-box"><span class="ic" style="--icon:url(assets/icons/eye-off.svg)"></span></span>
-            <h3>Sin analítica ni publicidad</h3>
-            <p>No hay SDKs de seguimiento ni de anuncios dentro de la app.</p>
+            <h3 data-i18n="privacy.box2.title">Sin analítica ni publicidad</h3>
+            <p data-i18n="privacy.box2.body">No hay SDKs de seguimiento ni de anuncios dentro de la app.</p>
           </div>
           <div>
             <span class="ic-box"><span class="ic" style="--icon:url(assets/icons/toggle-left.svg)"></span></span>
-            <h3>Lo opcional, solo si lo activas</h3>
-            <p>Health Connect y la copia en Google Drive están desactivados por defecto, y puedes revocarlos cuando quieras.</p>
+            <h3 data-i18n="privacy.box3.title">Lo opcional, solo si lo activas</h3>
+            <p data-i18n="privacy.box3.body">Health Connect y la copia en Google Drive están desactivados por defecto, y puedes revocarlos cuando quieras.</p>
           </div>
           <div>
             <span class="ic-box"><span class="ic" style="--icon:url(assets/icons/folder-lock.svg)"></span></span>
-            <h3>Copia en Drive, en tu cuenta</h3>
-            <p>Si la usas, se guarda en una carpeta oculta que solo la app puede ver. Nosotros no accedemos a ella.</p>
+            <h3 data-i18n="privacy.box4.title">Copia en Drive, en tu cuenta</h3>
+            <p data-i18n="privacy.box4.body">Si la usas, se guarda en una carpeta oculta que solo la app puede ver. Nosotros no accedemos a ella.</p>
           </div>
         </div>
       </div>
@@ -309,9 +314,9 @@
   <section class="launch" id="proximamente">
     <div class="launch-inner">
       <img src="assets/icon.png" alt="" width="64" height="64">
-      <span class="pill">Próximamente en Play Store</span>
-      <h2>Estamos terminando SETRYA</h2>
-      <p class="section-lede">Llegará a Google Play. Esta página se actualizará cuando esté disponible.</p>
+      <span class="pill" data-i18n="launch.badge">Próximamente en Play Store</span>
+      <h2 data-i18n="launch.title">Estamos terminando SETRYA</h2>
+      <p class="section-lede" data-i18n="launch.lede">Llegará a Google Play. Esta página se actualizará cuando esté disponible.</p>
       <a class="btn btn-ghost" href="mailto:contacto.setrya@gmail.com">contacto.setrya@gmail.com</a>
     </div>
   </section>
@@ -320,11 +325,11 @@
 
 <footer class="site-footer">
   <div class="wrap footer-row">
-    <span>© 2026 SETRYA · Desarrollada de forma independiente</span>
+    <span data-i18n="footer.copyright">© 2026 SETRYA · Desarrollada de forma independiente</span>
     <nav class="footer-links" aria-label="Pie">
-      <a href="privacidad/">Política de privacidad</a>
-      <a href="#funciones">Funciones</a>
-      <a href="mailto:contacto.setrya@gmail.com">Contacto</a>
+      <a href="privacidad/" data-i18n="footer.privacy">Política de privacidad</a>
+      <a href="#funciones" data-i18n="footer.features">Funciones</a>
+      <a href="mailto:contacto.setrya@gmail.com" data-i18n="footer.contact">Contacto</a>
     </nav>
   </div>
 </footer>
